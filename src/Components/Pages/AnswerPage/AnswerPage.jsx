@@ -324,24 +324,24 @@ function AnswerPage() {
       alert("Error updating answer");
     }
   };
-    
-  const handleDelete = async (userid) => {
-    console.log(userid);
-    try {
-      await axios.delete(`api/answers/${userid}`, {
-        headers: { Authorization: `Bearer ${token}` },
-      });
-      alert("Answer deleted successfully");
 
-      // Remove the deleted answer from the UI
-      // setShowAnswer(
-      //   showAnswer.filter((answer) => answer.answerid !== answerId)
-      // );
-    } catch (error) {
-      console.error("Error deleting answer:", error);
-      alert("Error deleting answer");
-    }
-  };
+    
+ const handleDelete = async (answerId) => {
+   console.log(answerId);
+   try {
+     await axios.delete(`api/answers/${answerId}`, {
+       headers: { Authorization: `Bearer ${token}` },
+     });
+     alert("Answer deleted successfully");
+
+     // Remove the deleted answer from the UI
+     setShowAnswer(showAnswer.filter((answer) => answer.answerid !== answerId));
+   } catch (error) {
+     console.error("Error deleting answer:", error);
+     alert("Error deleting answer");
+   }
+ };
+
 
   return (
     <div className={classes.answerContainer}>

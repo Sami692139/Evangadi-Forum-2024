@@ -10,6 +10,7 @@ import AnswerPage from "./Components/Pages/AnswerPage/AnswerPage";
 import LoginSignup from "./Components/Auth/LoginSignup";
 import Loading from "./assets/images/loadingicon.gif";
 import Four04 from "./Components/Pages/page404/Four04";
+import TermsOfService from "./Components/TermsOfService/TermsOfService";
 
 
 export const AppState = createContext();
@@ -100,6 +101,7 @@ function App() {
               </PrivateRoute>
             }
           />
+          <Route path="/terms-of-service" element={<TermsOfService/>}/>
           <Route path="*" element={<Four04 />} />
         </Route>
       </Routes>

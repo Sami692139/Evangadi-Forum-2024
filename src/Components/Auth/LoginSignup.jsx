@@ -15,21 +15,13 @@ function LoginSignup() {
 
   //we use useRef() to directly access their values without tracking them with useState()
   // A React hook used to create references for DOM elements, like form inputs. This allows direct access to their values without managing them via useState
-  // const emailRef = useRef();
-  // const passwordRef = useRef();
-  // const usernameRef = useRef();
-  // const firstNameRef = useRef();
-  // const lastNameRef = useRef();
-  // const emailSignupRef = useRef();
-  // const passwordSignupRef = useRef();
- const [
-   emailRef,
-   passwordRef,
-   usernameRef,
-   firstNameRef,
-   emailSignupRef,
-   passwordSignupRef,
- ] = [useRef(), useRef(), useRef(), useRef(), useRef(), useRef()];
+  const emailRef = useRef();
+  const passwordRef = useRef();
+  const usernameRef = useRef();
+  const firstNameRef = useRef();
+  const lastNameRef = useRef();
+  const emailSignupRef = useRef();
+  const passwordSignupRef = useRef();
 
 
   const [isLoginVisible, setIsLoginVisible] = useState(true);
